@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 import { useTracker } from 'meteor/react-meteor-data';
 import { LinksCollection } from '../api/links';
 
@@ -18,3 +18,4 @@ export const Info = () => {
     </div>
   );
 };
+ */

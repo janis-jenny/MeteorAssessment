@@ -4,4 +4,23 @@
 
 <body>
   <div id="react-target">Welcome to disquz!</div>
+  {{> comment}}
 </body>
+
+<!-- <template name="mainContainer">
+  <div class="container">
+      <header>
+          <h1>Dis Dashboard</h1>
+      </header>
+
+      <ul>
+          {{#each comments}}
+              {{> comment}}
+          {{/each}}
+      </ul>
+  </div>
+</template> -->
+
+<template name="comment">
+    <li>My comment</li>
+</template>

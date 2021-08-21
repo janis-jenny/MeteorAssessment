@@ -1,4 +1,4 @@
-import { Meteor } from 'meteor/meteor';
+/* import { Meteor } from 'meteor/meteor';
 import { LinksCollection } from '/imports/api/links';
 
 function insertLink({ title, url }) {
@@ -29,3 +29,4 @@ Meteor.startup(() => {
     });
   }
 });
+ */
