@@ -4,10 +4,10 @@
 
 <body>
   <div id="react-target">Welcome to disquz!</div>
-  {{> comment}}
+  {{> mainContainer}}
 </body>
 
-<!-- <template name="mainContainer">
+<template name="mainContainer">
   <div class="container">
       <header>
           <h1>Dis Dashboard</h1>
@@ -19,8 +19,8 @@
           {{/each}}
       </ul>
   </div>
-</template> -->
+</template>
 
 <template name="comment">
-    <li>My comment</li>
+    <li>{{text}}</li>
 </template>
