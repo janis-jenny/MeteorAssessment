@@ -11,20 +11,11 @@ Template.mainContainer.helpers({
 
 Template.form.events({
   "submit .add-form"(event) {
-    // Prevent default browser form submit
     event.preventDefault();
-    console.log(123)
-
-    // Get value from form element
     const target = event.target;
     const text = target.text.value;
 
-    CommentsCollection.insert({
-      text,
-      createdAt: new Date(),
-      owner: Meteor.userId(),
-      username: Meteor.user().emails[0].address,
-    });
+    Meteor.call('comments.insert', text);
 
     target.text.value = '';
   }
@@ -33,7 +24,7 @@ Template.form.events({
 Template.comment.events({
   "click .delete"(event) {
     event.preventDefault();
-    CommentsCollection.remove(this._id);
+    Meteor.call('comments.remove', this);
     return false
   }
   
