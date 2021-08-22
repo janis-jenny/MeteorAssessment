@@ -19,8 +19,9 @@
       </div>
     </div>
   </nav>
+  {{> form}}
   {{> mainContainer}}
-  {{> signUp}}
+  
 </body>
 
 <template name="mainContainer">
@@ -39,6 +40,16 @@
 
 <template name="comment">
     <li>{{text}}</li>
+</template>
+
+<template name="form">
+  <div class="container">
+    <form class="add-form">
+      <input type="text" name="text" placeholder="Start a conversation" />
+      <button type="submit">Add Comment</button>
+  </form>
+  </div>
+  
 </template>
 
 <template name="signUp">
