@@ -1,4 +1,27 @@
-body {
-  padding: 10px;
-  font-family: sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* a {
+  text-decoration: none;
+} */
+
+img {
+  width: 100%;
+  display: block;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+.nav {
+  background-color: #43635c;
+  height: 4rem;
+}
+
+.btn-color {
+  background-color: #b49692;
 }

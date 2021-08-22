@@ -1,10 +1,26 @@
 <head>
   <title>Meteor Assessment</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 
 <body>
-  <h1 id="react-target">Welcome to disquz!</h1>
+  <nav class="nav">
+    <div class="container">
+      <div class="nav-wrapper">
+        <div href="#" class="brand-logo">Disquz</div>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li class="nav-item">
+            Log In
+          </li>
+          <li class="nav-item">
+            Sign Up
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   {{> mainContainer}}
+  {{> signUp}}
 </body>
 
 <template name="mainContainer">
@@ -13,7 +29,7 @@
           <h3>Dis Dashboard</h3>
       </header>
 
-      <ul>
+      <ul class="collection">
           {{#each comments}}
               {{> comment}}
           {{/each}}
@@ -23,4 +39,8 @@
 
 <template name="comment">
     <li>{{text}}</li>
+</template>
+
+<template name="signUp">
+  
 </template>
