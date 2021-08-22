@@ -1,11 +1,14 @@
 <head>
   <title>Meteor Assessment</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 
 <body>
   {{#if currentUser}}
-    <nav class="nav">
+    <nav class="nav navbar-fixed">
       <div class="container">
         <div class="nav-wrapper">
             <div href="#" class="brand-logo">Disquz</div>
@@ -22,7 +25,7 @@
     {{> form}}
     {{> mainContainer}}
   {{else}}
-    <h1 class="welcome">Welcome to Disquz!</h1>
+    <h1 id="welcome">Welcome to Disquz!</h1>
     <div class="log-in">{{> loginButtons}}</div>
   {{/if}} 
 </body>
@@ -54,9 +57,5 @@
       <button type="submit">Add Comment</button>
   </form>
   </div>
-  
-</template>
-
-<template name="signUp">
   
 </template>

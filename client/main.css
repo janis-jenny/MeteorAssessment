@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #a28881;
+}
+
 a {
   text-decoration: none;
 }
@@ -18,14 +22,36 @@ ul li {
 }
 
 .nav {
-  background-color: #43635c;
+  background-color: #184243;
   height: 4rem;
 }
-/* 
-.btn-color {
-  background-color: #b49692;
-} */
+
+#welcome {
+  color: #184243;
+  font-family: 'Permanent Marker', cursive;
+  text-align: center;
+  margin-top: 4.5rem;
+}
+
+#login-buttons {
+  position: absolute;
+  top: 40%;
+  left: 46%;
+  padding: 1rem;
+  background-color: #184243;
+  border-radius: 6px;
+}
+
+#login-sign-in-link {
+  color: #e6e3e0;
+}
+
+#login-dropdown-list {
+  position: absolute;
+  top: 4rem;
+  left: -5.5rem;
+}
 
 #login-buttons .login-button, .accounts-dialog .login-button {
-  background-color: #43635c;
+  background-color: #184243;
 }
