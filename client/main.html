@@ -30,7 +30,7 @@
           <h3>Dis Dashboard</h3>
       </header>
 
-      <ul class="collection">
+      <ul class="collection row">
           {{#each comments}}
               {{> comment}}
           {{/each}}
@@ -39,7 +39,7 @@
 </template>
 
 <template name="comment">
-    <li>{{text}}</li>
+    <li class="collection-item col s11">{{text}} </li><a href="#" class="col s1 delete">Delete</a>
 </template>
 
 <template name="form">

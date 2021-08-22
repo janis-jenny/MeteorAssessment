@@ -28,3 +28,12 @@ Template.form.events({
     target.text.value = '';
   }
 })
+
+Template.comment.events({
+  "click .delete"(event) {
+    event.preventDefault();
+    CommentsCollection.remove(this._id);
+    return false
+  }
+  
+})
