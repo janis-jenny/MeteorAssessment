@@ -4,26 +4,27 @@
 </head>
 
 <body>
+  {{#if currentUser}}
     <nav class="nav">
       <div class="container">
         <div class="nav-wrapper">
-          {{#if currentUser}}
             <div href="#" class="brand-logo">Disquz</div>
-          {{/if}}
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li class="nav-item">
-              {{> loginButtons}}
-            </li>
+              <li class="nav-item">
+                {{> loginButtons}}
+              </li>
           </ul>
         </div>
       </div>
     </nav>
-    {{#if currentUser}}
-      {{> form}}
-      {{> mainContainer}}
-    {{else}}
-      <p class="welcome">Welcome to Disquz!</p>
-    {{/if}} 
+  {{/if}}
+  {{#if currentUser}}
+    {{> form}}
+    {{> mainContainer}}
+  {{else}}
+    <h1 class="welcome">Welcome to Disquz!</h1>
+    <div class="log-in">{{> loginButtons}}</div>
+  {{/if}} 
 </body>
 
 <template name="mainContainer">
@@ -41,7 +42,8 @@
 </template>
 
 <template name="comment">
-    <li class="collection-item col s11">{{text}} <strong>Added by {{username}}</strong></li>
+    <li class="collection-item col s8">{{text}}</li>
+    <span class="col s3 owner">By: {{username}}</span>
     <a href="#" class="col s1 delete">Delete</a>
 </template>
 
