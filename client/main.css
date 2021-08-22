@@ -25,3 +25,7 @@ ul li {
 .btn-color {
   background-color: #b49692;
 } */
+
+#login-buttons .login-button, .accounts-dialog .login-button {
+  background-color: #43635c;
+}

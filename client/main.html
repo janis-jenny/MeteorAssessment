@@ -4,24 +4,26 @@
 </head>
 
 <body>
-  <nav class="nav">
-    <div class="container">
-      <div class="nav-wrapper">
-        <div href="#" class="brand-logo">Disquz</div>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li class="nav-item">
-            Log In
-          </li>
-          <li class="nav-item">
-            Sign Up
-          </li>
-        </ul>
+    <nav class="nav">
+      <div class="container">
+        <div class="nav-wrapper">
+          {{#if currentUser}}
+            <div href="#" class="brand-logo">Disquz</div>
+          {{/if}}
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li class="nav-item">
+              {{> loginButtons}}
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-  {{> form}}
-  {{> mainContainer}}
-  
+    </nav>
+    {{#if currentUser}}
+      {{> form}}
+      {{> mainContainer}}
+    {{else}}
+      <p class="welcome">Welcome to Disquz!</p>
+    {{/if}} 
 </body>
 
 <template name="mainContainer">
@@ -39,7 +41,8 @@
 </template>
 
 <template name="comment">
-    <li class="collection-item col s11">{{text}} </li><a href="#" class="col s1 delete">Delete</a>
+    <li class="collection-item col s11">{{text}} <strong>Added by {{username}}</strong></li>
+    <a href="#" class="col s1 delete">Delete</a>
 </template>
 
 <template name="form">

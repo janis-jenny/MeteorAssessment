@@ -1,4 +1,5 @@
 import { Template } from 'meteor/templating';
+import { Meteor } from 'meteor/meteor';
 import { CommentsCollection } from '../lib/collection';
 import './main.html';
 
@@ -18,13 +19,13 @@ Template.form.events({
     const target = event.target;
     const text = target.text.value;
 
-    // Insert a task into the collection
     CommentsCollection.insert({
       text,
-      createdAt: new Date(), // current time
+      createdAt: new Date(),
+      owner: Meteor.userId(),
+      username: Meteor.user().emails[0].address,
     });
 
-    // Clear form
     target.text.value = '';
   }
 })
