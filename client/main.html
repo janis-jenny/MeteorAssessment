@@ -11,11 +11,11 @@
     <nav class="nav navbar-fixed">
       <div class="container">
         <div class="nav-wrapper">
-            <div href="#" class="brand-logo">Disquz</div>
+          <div href="#" class="brand-logo">Disquz</div>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li class="nav-item">
-                {{> loginButtons align="right"}}
-              </li>
+            <li class="nav-item">
+              {{> loginButtons align="right"}}
+            </li>
           </ul>
         </div>
       </div>
@@ -34,17 +34,17 @@
 <template name="mainContainer">
   <div class="container">
     <ul class="comment-list row">
-        {{#each comments}}
-            {{> comment}}
-        {{/each}}
+      {{#each comments}}
+          {{> comment}}
+      {{/each}}
     </ul>
   </div>
 </template>
 
 <template name="comment">
-    <li class="text-box col s7">{{text}}</li>
-    <span class="col s3 owner">By: {{username}}</span>
-    <a href="#" class="col s1 delete">Delete</a>
+  <li class="text-box col s7">{{text}}</li>
+  <span class="col s3 owner">By: {{username}}</span>
+  <a href="#" class="col s1 delete">Delete</a>
 </template>
 
 <template name="form">

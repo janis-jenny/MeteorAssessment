@@ -75,8 +75,8 @@ Give a ⭐️ if you like this project!
 ## 📌 Acknowledgments
 
 - [Meteor Docs](https://docs.meteor.com/#/full/)
-- [Meteor Blaze turorial](https://blaze-tutorial.meteor.com/)
-- [Stack Overflow]
+- [Meteor Blaze tutorial](https://blaze-tutorial.meteor.com/)
+- Stack Overflow
 
 
 

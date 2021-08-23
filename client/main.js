@@ -27,5 +27,4 @@ Template.comment.events({
     Meteor.call('comments.remove', this);
     return false
   }
-  
 })
