@@ -74,11 +74,10 @@ Give a ⭐️ if you like this project!
 
 ## 📌 Acknowledgments
 
-- [Mohammed Awad on Behance](https://www.behance.net/M_Awad)
-- [Font Awesome Icons](https://fontawesome.com)
-- [Unsplash](https://unsplash.com)
-- [Flaticon](https://www.flaticon.com/)
-- Microverse Team 140 (The Cupids)
+- [Meteor Docs](https://docs.meteor.com/#/full/)
+- [Meteor Blaze turorial](https://blaze-tutorial.meteor.com/)
+- [Stack Overflow]
+
 
 
 
