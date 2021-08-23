@@ -1,5 +1,5 @@
 <head>
-  <title>Meteor Assessment</title>
+  <title>Disquz</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
             <div href="#" class="brand-logo">Disquz</div>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
               <li class="nav-item">
-                {{> loginButtons}}
+                {{> loginButtons align="right"}}
               </li>
           </ul>
         </div>
@@ -22,40 +22,43 @@
     </nav>
   {{/if}}
   {{#if currentUser}}
+    {{> topic}}
     {{> form}}
     {{> mainContainer}}
   {{else}}
     <h1 id="welcome">Welcome to Disquz!</h1>
-    <div class="log-in">{{> loginButtons}}</div>
+    <div class="login-btn">{{> loginButtons}}</div>
   {{/if}} 
 </body>
 
 <template name="mainContainer">
   <div class="container">
-      <header>
-          <h3>Dis Dashboard</h3>
-      </header>
-
-      <ul class="collection row">
-          {{#each comments}}
-              {{> comment}}
-          {{/each}}
-      </ul>
+    <ul class="comment-list row">
+        {{#each comments}}
+            {{> comment}}
+        {{/each}}
+    </ul>
   </div>
 </template>
 
 <template name="comment">
-    <li class="collection-item col s8">{{text}}</li>
+    <li class="text-box col s7">{{text}}</li>
     <span class="col s3 owner">By: {{username}}</span>
     <a href="#" class="col s1 delete">Delete</a>
 </template>
 
 <template name="form">
-  <div class="container">
-    <form class="add-form">
+  <div class="container row">
+    <form class="add-form col-11">
       <input type="text" name="text" placeholder="Start a conversation" />
-      <button type="submit">Add Comment</button>
-  </form>
+      <button class="add" type="submit">Add Comment</button>
+    </form>
   </div>
-  
+</template>
+
+<template name="topic">
+  <div class="container">
+    <h4 class="topic">Topic: Woman In Tech</h4>
+    <p class="topic-description">In this forum we provide women at every stage of their career the opportunity to learn best practices from senior role models in the industry, network with peers and learn how to achieve their full potential.</p>
+  </div>
 </template>
