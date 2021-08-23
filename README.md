@@ -27,7 +27,7 @@
 ## 👩🏼‍💻 About Disquz 
 
 
-It is a dashboard board for any topic, when the users can discuss or start a conversation about it. You must be a registered user and be logged in to go to the dashboard.
+It is a dashboard board for any topic, where the users can discuss or start a conversation about it. You must be a registered user and be logged in to go to the dashboard.
 
 ![screenshot](./public/images/disquz1.jpg)
 ![screenshot](./public/images/disquz2.jpg)
